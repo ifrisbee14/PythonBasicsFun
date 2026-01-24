@@ -52,6 +52,11 @@ def convert_english_to_morse(lines: list[str]) -> str:
             print(repr(line))
             if char in english_morse_dict:
                 converted_text += english_morse_dict[char] + " "
+            elif char == " " or char == "\n":
+                converted_text += char
+            else:
+                print ("Unrecognized character")
+    
     return converted_text
 
 def main():
